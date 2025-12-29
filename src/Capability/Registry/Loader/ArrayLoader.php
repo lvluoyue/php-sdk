@@ -105,7 +105,7 @@ final class ArrayLoader implements LoaderInterface
                     $docBlock = $docBlockParser->parseDocBlock($reflection->getDocComment() ?? null);
 
                     $name = $data['name'] ?? ('__invoke' === $methodName ? $classShortName : $methodName);
-                    $description = $data['description'] ?? $docBlockParser->getSummary($docBlock) ?? null;
+                    $description = $data['description'] ?? $docBlockParser->getDescription($docBlock) ?? null;
                 }
 
                 $inputSchema = $data['inputSchema'] ?? $schemaGenerator->generate($reflection);
@@ -145,7 +145,7 @@ final class ArrayLoader implements LoaderInterface
                     $docBlock = $docBlockParser->parseDocBlock($reflection->getDocComment() ?? null);
 
                     $name = $data['name'] ?? ('__invoke' === $methodName ? $classShortName : $methodName);
-                    $description = $data['description'] ?? $docBlockParser->getSummary($docBlock) ?? null;
+                    $description = $data['description'] ?? $docBlockParser->getDescription($docBlock) ?? null;
                 }
 
                 $resource = new Resource(
@@ -185,7 +185,7 @@ final class ArrayLoader implements LoaderInterface
                     $docBlock = $docBlockParser->parseDocBlock($reflection->getDocComment() ?? null);
 
                     $name = $data['name'] ?? ('__invoke' === $methodName ? $classShortName : $methodName);
-                    $description = $data['description'] ?? $docBlockParser->getSummary($docBlock) ?? null;
+                    $description = $data['description'] ?? $docBlockParser->getDescription($docBlock) ?? null;
                 }
 
                 $template = new ResourceTemplate(
@@ -224,7 +224,7 @@ final class ArrayLoader implements LoaderInterface
                     $docBlock = $docBlockParser->parseDocBlock($reflection->getDocComment() ?? null);
 
                     $name = $data['name'] ?? ('__invoke' === $methodName ? $classShortName : $methodName);
-                    $description = $data['description'] ?? $docBlockParser->getSummary($docBlock) ?? null;
+                    $description = $data['description'] ?? $docBlockParser->getDescription($docBlock) ?? null;
                 }
 
                 $arguments = [];
